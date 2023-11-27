@@ -1,4 +1,12 @@
 
+
+// -- App Text Strings
+
+// -- Generic Text
+const String tLogin = 'Login';
+const String tSignup = 'Sign up';
+
+
 // -- Splash Screen Text
 const String tAppName = 'Bilol Bags';
 const String tAppTagLine = 'Buy Online. \nIt is Cheaper';
@@ -13,3 +21,7 @@ const String tOnBoardingSubTitle3 = "Let's start your journey with us on this am
 const String tOnBoardingCounter1 = "1/3";
 const String tOnBoardingCounter2 = "2/3";
 const String tOnBoardingCounter3 = "3/3";
+
+// -- Welcome Screen Text
+const String tWelcomeTitle = "Build Awesome apps";
+const String tWelcomeSubTitle = "Let's start your journey with us on this amazing and easy app";

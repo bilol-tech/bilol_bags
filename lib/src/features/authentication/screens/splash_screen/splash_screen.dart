@@ -19,8 +19,8 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SplashScreenController.find.startAnimation();
-
-
+    var mediaQuery = MediaQuery.of(context);
+    var height = mediaQuery.size.height;
     return Scaffold(
       body: Stack(
         children: [
