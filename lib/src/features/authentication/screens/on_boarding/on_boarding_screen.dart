@@ -1,9 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../../../../common_widgets/fade_in_animation/fade_in_animation_controller.dart';
 import '../../../../constants/colors.dart';
 import '../../controllers/on_boarding_controller.dart';
 
@@ -13,7 +16,12 @@ class OnBoardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final obController = OnBoardingController();
+    var mediaQuery = MediaQuery.of(context);
+    var height = mediaQuery.size.height;
+    var brightness = mediaQuery.platformBrightness;
+    final isDarkMode = brightness == Brightness.dark;
     return Scaffold(
+      backgroundColor: isDarkMode ? tSecondaryColor : tPrimaryColor,
       body: Stack(
         alignment: Alignment.center,
         children: [
@@ -22,38 +30,39 @@ class OnBoardingScreen extends StatelessWidget {
             enableSideReveal: true,
             liquidController: obController.controller,
             onPageChangeCallback: obController.onPageChangedCallback,
-            slideIconWidget: const Icon(Icons.arrow_back_ios),
+            slideIconWidget: Icon(Icons.arrow_back_ios, color: isDarkMode ? tSecondaryColor : tPrimaryColor),
             waveType: WaveType.circularReveal,
           ),
           Positioned(
-            bottom: 80.0,
+            bottom: height * 0.100,
             child: OutlinedButton(
               onPressed: () => obController.animateToNextSlide(),
               style: ElevatedButton.styleFrom(
                 side: const BorderSide(color: Colors.black26),
                 shape: const CircleBorder(),
-                padding: const EdgeInsets.all(20),
+                // padding: EdgeInsets.all(height * 0.6),
                 onPrimary: Colors.white,
+                fixedSize: Size(56.0, height * 0.112)
               ),
               child: Container(
-                padding: const EdgeInsets.all(20.0),
+                padding: EdgeInsets.all(height * 0.014),
                 decoration: const BoxDecoration(
                     color: tDarkColor, shape: BoxShape.circle),
-                child: const Icon(Icons.arrow_forward_ios),
+                child: Icon(Icons.arrow_forward_ios, size: height * 0.023,),
               ),
             ),
           ),
           Positioned(
-            top: 50,
-            right: 20,
+            top: height * 0.045,
+            right: height * 0.005,
             child: TextButton(
               onPressed: () => obController.skip(),
-              child: const Text("Skip", style: TextStyle(color: Colors.grey)),
+              child: Text("Skip"),
             ),
           ),
           Obx(
                 () => Positioned(
-              bottom: 40,
+              bottom: height * 0.060,
               child: AnimatedSmoothIndicator(
                 count: 3,
                 activeIndex: obController.currentPage.value,
