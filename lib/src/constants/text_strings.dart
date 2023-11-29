@@ -3,8 +3,8 @@
 // -- App Text Strings
 
 // -- Generic Text
-const String tLogin = 'Login';
-const String tSignup = 'Sign up';
+const String tLogin = ' Login';
+const String tSignup = ' Sign up';
 
 
 // -- Splash Screen Text
@@ -25,3 +25,21 @@ const String tOnBoardingCounter3 = "3/3";
 // -- Welcome Screen Text
 const String tWelcomeTitle = " Free Delivery";
 const String tWelcomeSubTitle = "Enjoy Free Delivery on Trendsetting Fashion – Elevate Your Wardrobe Today!";
+
+
+// -- Login Screen Text
+const String tLoginTitle = "Welcome Back,";
+const String tLoginSubTitle = "Make it work, make it right, make it fast.";
+const String tRememberMe = "Remember Me?";
+const String tDontHaveAnAccount = "Don't have an account?";
+const String tEmail = 'E-Mail';
+const String tPassword = 'Password';
+const String tForgetPassword = 'Forget Password?';
+const String tSignInWithGoogle = 'Sign-In with Google';
+
+// -- Sign up Screen Text
+const String tSignUpTitle = "Get On Board!";
+const String tSignUpSubTitle = "Create your profile to start your Journey with us...";
+const String tAlreadyHaveAnAccount = "Already have an account?";
+const String tFullName = "Full Name";
+const String tPhoneNo = "Phone Number";

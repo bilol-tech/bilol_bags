@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:onlinabags/src/utils/theme/widget_theme/elevated_button_theme.dart';
 import 'package:onlinabags/src/utils/theme/widget_theme/outlined_button_theme.dart';
+import 'package:onlinabags/src/utils/theme/widget_theme/text_field_theme.dart';
 import 'package:onlinabags/src/utils/theme/widget_theme/text_theme.dart';
 
 class TAppTheme {
@@ -16,6 +17,7 @@ class TAppTheme {
     elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,
     // ElevatedButtonThemeData(style: ElevatedButton.styleFrom()),
     outlinedButtonTheme: TOutlinedButtonTheme.lightOutlinedButtonTheme,
+    inputDecorationTheme: TTextFormFieldTheme.lightInputDecorationTheme,
   );
 
 
@@ -28,5 +30,7 @@ class TAppTheme {
     // elevatedButtonTheme: ElevatedButtonThemeData(style: ElevatedButton.styleFrom()),
     outlinedButtonTheme: TOutlinedButtonTheme.darkOutlinedButtonTheme,
     elevatedButtonTheme: TElevatedButtonTheme.darkElevatedButtonTheme,
+    inputDecorationTheme: TTextFormFieldTheme.darkInputDecorationTheme,
+
   );
 }

@@ -8,6 +8,7 @@ import 'package:onlinabags/src/constants/colors.dart';
 import 'package:onlinabags/src/constants/image_strings.dart';
 import 'package:onlinabags/src/constants/sizes.dart';
 import 'package:onlinabags/src/constants/text_strings.dart';
+import 'package:onlinabags/src/routing/routing.dart';
 
 import '../../../../common_widgets/fade_in_animation/fade_in_animation_controller.dart';
 
@@ -21,7 +22,6 @@ class WelcomeScreen extends StatefulWidget {
 class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
-
     final controller = Get.put(FadeInAnimationController());
     controller.animationIn();
 
@@ -43,8 +43,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 topAfter: 0,
                 topBefore: 0,
                 rightAfter: 0,
-                rightBefore: 0
-            ),
+                rightBefore: 0),
             child: Container(
               padding: const EdgeInsets.all(tDefaultSize),
               child: Column(
@@ -59,17 +58,21 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       Text(
                         tWelcomeTitle,
                         textAlign: TextAlign.center,
-                        style: Theme.of(context).textTheme.headline3?.copyWith(
-                          fontSize: height * 0.04
-                        ),
+                        style: Theme.of(context)
+                            .textTheme
+                            .headline3
+                            ?.copyWith(fontSize: height * 0.04),
                       ),
-                      SizedBox(height: height * 0.01,),
+                      SizedBox(
+                        height: height * 0.01,
+                      ),
                       Text(
                         tWelcomeSubTitle,
                         textAlign: TextAlign.center,
-                        style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                          fontSize: height * 0.023
-                        ),
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyText1
+                            ?.copyWith(fontSize: height * 0.023),
                       ),
                     ],
                   ),
@@ -77,7 +80,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     children: [
                       Expanded(
                         child: OutlinedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, tLogInRoute);
+                          },
                           child: Text(tLogin.toUpperCase()),
                         ),
                       ),
@@ -86,7 +91,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                       ),
                       Expanded(
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, tSignUpRoute);
+                          },
                           child: Text(tSignup.toUpperCase()),
                         ),
                       ),
