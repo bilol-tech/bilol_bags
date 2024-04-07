@@ -1,16 +1,27 @@
-# onlinabags
+# Registration
 
-A new Flutter project.
+![Sign In Sign Up](https://github.com/bilol-tech/registration/blob/main/assets/SignIn-SignUp.png)
 
-## Getting Started
+This is a dynamic mobile application developed on Flutter, offering both light and dark modes for enhanced user experience. Focused on streamlined registration processes, its core functionalities include seamless Sign-in and Sign-up features. Additionally, the app boasts engaging page animations, elevating user interaction and navigation between various sections.
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- Light and dark modes
+- Seamless Sign-in and Sign-up features
+- Engaging page animations
+- Streamlined registration processes
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Technologies Used
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Flutter
+- Dart
+- Firebase
+- REST APIs
+- Hive
+
+## Usage
+
+1. Download and install the Registration mobile application on your device.
+2. Sign in or register for a new account.
+3. Explore different sections and features of the app.
+4. Enjoy the dynamic interface and engaging animations.
